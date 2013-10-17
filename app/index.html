@@ -12,7 +12,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/chosen.css">
+        <link rel="stylesheet" href="styles/tag.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
@@ -31,8 +31,21 @@
                     <p>really cool tagline</p>
                 </div>
             </div>
+            <div class="nav">
+                        <ul>
+                            <li><input name="tags" id="tags" value="foo,bar,baz"></li>
+                        </ul> 
+                        <p> <img src="images/arrow.png"> Start Grabbing! <img src="images/arrow.png"></p>
+            </div>
 
+            
+            <div class="wrapper">
+                <div class="main">
+                    
 
+                    <div class="main"> pix go here</div>
+                </div>
+            </div>
 
 
             <div class="footer"></div>
@@ -42,7 +55,7 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
-        <script src="bower_components/chosen/chosen.js"></script>
+        <script src="bower_components/isotope/jquery.isotope.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -57,6 +70,7 @@
         </script>
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/tags.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 

@@ -23,6 +23,7 @@ $white: rgb(233,241,223);
 body {
     padding-bottom: 20px;
     background:$white;
+    font-family:'Asap';
 }
 
 .wrapper {
@@ -30,10 +31,17 @@ body {
     width:90%;
 }
 
-/* Custom page header */
+/* Header styles */
 .header {
     border-bottom: 2px solid $blue;
-    background: $blue;
+    background: -moz-linear-gradient(top, rgba(5,171,224,1) 0%, rgba(92,179,188,1) 61%, rgba(54,177,191,1) 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(5,171,224,1)), color-stop(61%,rgba(92,179,188,1)), color-stop(99%,rgba(54,177,191,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(5,171,224,1) 0%,rgba(92,179,188,1) 61%,rgba(54,177,191,1) 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(5,171,224,1) 0%,rgba(92,179,188,1) 61%,rgba(54,177,191,1) 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(5,171,224,1) 0%,rgba(92,179,188,1) 61%,rgba(54,177,191,1) 99%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(5,171,224,1) 0%,rgba(92,179,188,1) 61%,rgba(54,177,191,1) 99%); /* W3C */
+    z-index:100;
+    position:relative;
 
     p {
         display:inline-block;
@@ -42,7 +50,6 @@ body {
     }
 }
 
-/* Make the masthead heading the same height as the navigation */
 .header h3 {
     margin-top: 0;
     margin-bottom: -7px;
@@ -57,6 +64,66 @@ body {
      span {
         color:$red;
     }
+}
+
+/*Sidebar styles*/
+
+.nav {
+        width:100%;
+        height:100px;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:99;
+        background:#111;
+        color:#fff;
+        overflow:hidden;
+        -webkit-transition:height 1s ease;
+
+        ul {
+            margin:0;
+            padding:0;
+            width:220px;
+            margin:10px;
+            list-style:none;
+            position:absolute;
+            top:30%;
+
+            div.tagsinput {
+                opacity:0;
+                position:absolute;
+                left:40px;
+                top:19px;
+            }
+        }
+
+        p {
+            text-align:right;
+            opacity:1;
+            color:$red;
+            line-height:12.5;
+            padding-right:20px;
+        }
+
+    }
+.nav:hover {
+    height:200px;
+    -webkit-transition:height 1s ease;
+
+    div.tagsinput {
+            opacity:1;
+            -webkit-transition:opacity 1.3s;
+    }
+
+    p {
+        opacity:0;
+        -webkit-transition:opacity 1.3s;
+    }
+}
+
+#tags {
+    position:absolute;
+    top:0px;
 }
 
 /* Custom page footer */
