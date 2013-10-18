@@ -2,7 +2,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 $lightblue: rgb(74,217,217);
 $blue: rgb(54,177,191);
-$orange: rgb(245,165,3);   
+$orange: #FF8B0D;   
 $red: rgb(242,56,90);
 $white: rgb(233,241,223);
 
@@ -70,12 +70,12 @@ body {
 
 .nav {
         width:100%;
-        height:100px;
+        height:120px;
         position:absolute;
         top:0;
         left:0;
         z-index:99;
-        background:#111;
+        background:$orange;
         color:#fff;
         overflow:hidden;
         -webkit-transition:height 1s ease;
@@ -89,20 +89,31 @@ body {
             position:absolute;
             top:30%;
 
-            div.tagsinput {
+            .tagsinput {
                 opacity:0;
-                position:absolute;
-                left:40px;
-                top:19px;
+                -webkit-transition:opacity 1s ease;
+                position: absolute;
+                top: 20px;
             }
         }
 
+
         p {
+            float:right;
             text-align:right;
             opacity:1;
-            color:$red;
-            line-height:12.5;
-            padding-right:20px;
+            color:white;
+            font-size:20px;
+            text-shadow: hsl(0,0%,0%) -1px 1px, hsl(0,0%,0%) -2px 2px;
+            font-family:'asap';
+            line-height:10;
+            padding-right:50px;
+            -webkit-transition:opacity .6s ease-out;
+
+            img {
+                height:25px;
+                width:25px;
+            }
         }
 
     }
@@ -110,21 +121,17 @@ body {
     height:200px;
     -webkit-transition:height 1s ease;
 
-    div.tagsinput {
-            opacity:1;
-            -webkit-transition:opacity 1.3s;
-    }
-
     p {
         opacity:0;
         -webkit-transition:opacity 1.3s;
     }
+
+    .tagsinput {
+        opacity:1;
+        -webkit-transition:opacity 1s ease;
+    }
 }
 
-#tags {
-    position:absolute;
-    top:0px;
-}
 
 /* Custom page footer */
 .footer {

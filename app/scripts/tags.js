@@ -179,7 +179,7 @@
       interactive:true,
       defaultText:'add a tag',
       minChars:0,
-      width:'100%',
+      width:'300px',
       height:'100px',
       autocomplete: {selectFirst: false },
       'hide':true,
