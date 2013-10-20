@@ -92,10 +92,30 @@ body {
             margin:10px;
             list-style:none;
             position:absolute;
-            top:30%;
+            top:30%;    
 
             li {
                 display:inline;
+
+                a {
+                    text-decoration:none;
+                    color:white;
+                }
+
+                a:hover {
+                    .grab {
+                        background:$blue;
+                    }
+                }
+
+                a:active {
+                    .grab {
+                        border:none;
+                        background-color: #348A8A;
+                        top:133px;
+
+                    }
+                }
             }
 
             .tagsinput {
@@ -113,13 +133,28 @@ body {
                 display:inline;
                 opacity:0;
             }
+
+            .grab {
+                width: 100px;
+                height: 30px;
+                border: 1px solid $blue;
+                background-color: $lightblue;
+                border-radius:4px;
+                position: absolute;
+                top: 131px;
+                left: 257px;
+                text-align: center;
+                line-height: 24px;
+            }
         }
 
 
         .start {
         text-align: center;
         margin: 0 auto;
+        height:10px;
         width: 100%;
+        z-index:100;
         opacity: 1;
         color: white;
         font-size: 20px;
@@ -330,6 +365,20 @@ body {
 
     .tagsinput {
         width:200px;
+        opacity:0;
+        -webkit-transition:opacity 1s ease;
+        position: absolute;
+        top: 20px;
+        display:inline;
+    }
+
+
+    .dates {
+        position:absolute;
+        left: 109%;
+        top: 18px;
+        display:inline;
+        opacity:0;
     }
 
     .main {
