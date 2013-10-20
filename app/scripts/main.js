@@ -19,17 +19,19 @@ $('.hide-button').click(function(){
 
 $(function() {
     $( "#from" ).datepicker({
-      defaultDate: "+1w",
+      defaultDate: "-1d",
       changeMonth: true,
-      numberOfMonths: 3,
+      changeYear:true,
+      numberOfMonths: 1,
       onClose: function( selectedDate ) {
         $( "#to" ).datepicker( "option", "minDate", selectedDate );
       }
     });
     $( "#to" ).datepicker({
-      defaultDate: "+1w",
+      defaultDate: "+1d",
       changeMonth: true,
-      numberOfMonths: 3,
+      changeYear: true,
+      numberOfMonths: 1,
       onClose: function( selectedDate ) {
         $( "#from" ).datepicker( "option", "maxDate", selectedDate );
       }

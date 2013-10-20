@@ -26,9 +26,10 @@ body {
     font-family:'Asap';
 }
 
+
 .wrapper {
     margin:0 auto;
-    width:90%;
+    width:98%;
 }
 
 /* Header styles */
@@ -42,6 +43,8 @@ body {
     background: linear-gradient(to bottom, rgba(5,171,224,1) 0%,rgba(92,179,188,1) 61%,rgba(54,177,191,1) 99%); /* W3C */
     z-index:100;
     position:relative;
+    padding-left:10px;
+    padding-right:10px;
 
     p {
         display:inline-block;
@@ -91,16 +94,22 @@ body {
             position:absolute;
             top:30%;
 
+            li {
+                display:inline;
+            }
+
             .tagsinput {
                 opacity:0;
                 -webkit-transition:opacity 1s ease;
                 position: absolute;
                 top: 20px;
+                display:inline;
             }
 
             .dates {
                 position:absolute;
                 left:30%;
+                display:inline;
             }
         }
 
@@ -162,7 +171,7 @@ body {
 
 .main {
     margin: 0 auto;
-    width:960px;
+    width:90%;
 }
 
 .view {
@@ -320,6 +329,8 @@ body {
 
     .main {
         width:90%;
+        margin:0 auto;
+
     }
 }
 
@@ -342,4 +353,10 @@ body {
         right:50%;
 
     }
+    .wrapper .nav {
+        width:80%;
+        display:inline-block;
+    }
+
+
 }
