@@ -1,4 +1,5 @@
 $('#tags').tagsInput({
+  "width":"200px"
 });
 
 
@@ -8,6 +9,7 @@ $('.start').click(function(){
 	$('.hide-button').css('opacity', "1")
 	$('.start').css('opacity', '0')
 	$('.nav').css('height', '200px')
+  $('.dates').css('opacity', "1")
 })
 
 $('.hide-button').click(function(){
@@ -15,6 +17,7 @@ $('.hide-button').click(function(){
 	$('.tagsinput').css('opacity', '0')
 	$('.start').css('opacity', '1')
 	$('.hide-button').css('opacity', "0")
+  $('.dates').css('opacity', "0")
 })
 
 $(function() {

@@ -108,8 +108,10 @@ body {
 
             .dates {
                 position:absolute;
-                left:30%;
+                left: 109%;
+                top: 18px;
                 display:inline;
+                opacity:0;
             }
         }
 
@@ -117,7 +119,7 @@ body {
         .start {
             position:absolute;
             text-align:right;
-            right:1%;
+            right:-9%;
             opacity:1;
             color:white;
             font-size:20px;
@@ -325,6 +327,10 @@ body {
         p {
             display:none;
         }
+    }
+
+    .tagsinput {
+        width:200px;
     }
 
     .main {
