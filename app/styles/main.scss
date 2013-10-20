@@ -117,16 +117,16 @@ body {
 
 
         .start {
-            position:absolute;
-            text-align:right;
-            right:-9%;
-            opacity:1;
-            color:white;
-            font-size:20px;
-            font-family:'asap';
-            line-height:10;
-            padding-right:50px;
-            -webkit-transition:opacity .6s ease-out;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        opacity: 1;
+        color: white;
+        font-size: 20px;
+        font-family: 'asap';
+        line-height: 10;
+        padding-right: 0px;
+        -webkit-transition: opacity .6s ease-out;
 
             img {
                 height:25px;
@@ -137,7 +137,7 @@ body {
         .hide-button {
             position:absolute;
             top: 85px;
-            right:10%;
+            right:3%;
             opacity:0;
             font-size: 20px;
 
@@ -179,8 +179,7 @@ body {
 .view {
     width: 300px;
     height: 300px;
-    margin: 10px;
-    float: left;
+    margin: 0 auto;
     border: 10px solid #fff;
     overflow: hidden;
     position: relative;
@@ -349,14 +348,13 @@ body {
         float:none;
         display:block;
         text-align:center;
-        right:50%;
+        position: absolute;
+        right:-3%;
 
     }
     .start {
-        float:none;
         display:block;
         text-align:center;
-        right:50%;
 
     }
     .wrapper .nav {

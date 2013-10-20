@@ -1,15 +1,19 @@
+// Tag searcher
+
 $('#tags').tagsInput({
-  "width":"200px"
+  "width":"200px",
+  "height": "175px"
 });
 
+// Nav Bar functions
 
 $('.start').click(function(){
 	$('.nav').addClass('nav-full')
 	$('.tagsinput').css('opacity', "1")
 	$('.hide-button').css('opacity', "1")
 	$('.start').css('opacity', '0')
-	$('.nav').css('height', '200px')
-  $('.dates').css('opacity', "1")
+	$('.nav').css('height', '300px')
+  $('.dates').css('opacity', "1") 
 })
 
 $('.hide-button').click(function(){
@@ -19,6 +23,8 @@ $('.hide-button').click(function(){
 	$('.hide-button').css('opacity', "0")
   $('.dates').css('opacity', "0")
 })
+
+// Date Picker
 
 $(function() {
     $( "#from" ).datepicker({
