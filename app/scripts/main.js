@@ -5,6 +5,7 @@ $('#tags').tagsInput({
   "height": "175px"
 });
 
+$('input').prop('disabled', true);
 // Nav Bar functions
 
 $('.start').click(function(){
@@ -14,6 +15,7 @@ $('.start').click(function(){
 	$('.start').css('opacity', '0')
 	$('.nav').css('height', '320px')
   $('.dates').css('opacity', "1")
+  $('input').prop('disabled', false);
 })
 
 $('.hide-button').click(function(){
@@ -22,6 +24,7 @@ $('.hide-button').click(function(){
 	$('.start').css('opacity', '1')
 	$('.hide-button').css('opacity', "0")
   $('.dates').css('opacity', "0")
+  $('input').prop('disabled', true);
 })
 
 // Date Picker
