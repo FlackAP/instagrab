@@ -23,28 +23,28 @@ allGrabbed = Backbone.Collection.extend({
 
 var data = [
 	{
-	Photo: 'images/cool.jpg',
+	Photo: "https://raw.github.com/FlackAP/instagrab/master/app/images/cool.jpg",
 	Timestamp: 'September 1 2013',
 	Caption: 'Smokin a pipe and brooding',
 	Likes: '100',
 	Comments: '4,000'
 	},
 	{
-	Photo: 'images/rocky.jpg',
+	Photo: 'https://raw.github.com/FlackAP/instagrab/master/app/images/rocky.jpg',
 	Timestamp: 'October 3 2013',
 	Caption: 'Wow Cool Dog!!!!',
 	Likes: '200',
 	Comments: '13'
 	},
 	{
-	Photo: 'images/three.jpg',
+	Photo: 'https://raw.github.com/FlackAP/instagrab/master/app/images/three.jpg',
 	Timestamp: 'October 4 2013',
 	Caption: '#Cool #Drinking #A Coffee#',
 	Likes: '100',
 	Comments: '4,000'
 	},
 	{
-	Photo: 'images/shine.jpg',
+	Photo: 'https://raw.github.com/FlackAP/instagrab/master/app/images/shine.jpg',
 	Timestamp: 'October 4 2013',
 	Caption: 'MOONSHINE GET YA DRUNK',
 	Likes: '500',
