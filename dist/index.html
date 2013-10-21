@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/fffbdefe.main.css">
+        <link rel="stylesheet" href="styles/40209bcd.main.css">
         <script src="scripts/vendor/f7f27360.modernizr.js"></script>
     </head>
     <body>
@@ -27,7 +27,7 @@
                     
                 </div>
             </div>
-            <div class="nav">   
+            <div class="nav begin">   
                         <ul>
                             <li><input name="tags" id="tags" value="puppy"></li>
                             <li class="dates">
@@ -35,6 +35,9 @@
                                 <input type="text" id="from" name="from">
                                 <label for="to">To:</label>
                                 <input type="text" id="to" name="to">
+                            </li>
+                            <li>
+                                <a class="route" href="#/grabbed"><div class="grab">grab images</div></a>
                             </li>
                         </ul> 
                         <p class="start">start grabbing! <img src="images/0b9671a9.arrow.png"></p>
@@ -45,49 +48,24 @@
             <div class="wrapper">
                 <div class="main">
 
-                    
+                    <script type="text/template" id="photo-template">
+                        <div class="view cool-view">
+                            <img src="<%= item.get('photo')%>"/>  
+                            <div class="mask">  
+                                <h2><%= item.get('Timestamp')%></h2>  
+                                <p><%= item.get('Caption')%></p>  
+                                <p><%= item.get('Likes')%> likes, <%= item.get('Comments')%> comments</p>  
+                            </div>  
+                        <div>
+                    </script>
 
-                    <div class="main">
-                        <div class="view cool-view">  
-                            <img src="images/2d027884.cool.jpg">  
-                            <div class="mask">  
-                                <h2>Timestamp</h2>  
-                                <p>Caption</p>  
-                                <p>3 likes, 2 comments</p>  
-                            </div>  
-                        </div>
-                        <div class="view cool-view">  
-                            <img src="images/2d027884.cool.jpg">  
-                            <div class="mask">  
-                                <h2>Timestamp</h2>  
-                                <p>Caption</p>  
-                                <p>3 likes, 2 comments</p>  
-                            </div>  
+                    <div class="view cool-view">  
+                        <img src="images/2d027884.cool.jpg">  
+                        <div class="mask">  
+                            <h2>Timestamp</h2>  
+                            <p>Caption</p>  
+                            <p>3 likes, 2 comments</p>  
                         </div>  
-                        <div class="view cool-view">  
-                            <img src="images/2d027884.cool.jpg">  
-                            <div class="mask">  
-                                <h2>Timestamp</h2>  
-                                <p>Caption</p>  
-                                <p>3 likes, 2 comments</p>  
-                            </div>  
-                        </div>  
-                        <div class="view cool-view">  
-                            <img src="images/2d027884.cool.jpg">  
-                            <div class="mask">  
-                                <h2>Timestamp</h2>  
-                                <p>Caption</p>  
-                                <p>3 likes, 2 comments</p>  
-                            </div>  
-                        </div>  
-                        <div class="view cool-view">  
-                            <img src="images/2d027884.cool.jpg">  
-                            <div class="mask">  
-                                <h2>Timestamp</h2>  
-                                <p>Caption</p>  
-                                <p>3 likes, 2 comments</p>  
-                            </div>  
-                        </div>    
                     </div>
                 </div>
             </div>
@@ -97,7 +75,7 @@
         </div>
 
 
-        <script src="scripts/f521d8a0.vendor.js"></script>
+        <script src="scripts/a1b1a129.vendor.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -109,7 +87,7 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <script src="scripts/ee762f20.main.js"></script>
+        <script src="scripts/0e950af9.main.js"></script>
 
         <script src="scripts/491c175a.plugins.js"></script>
 </body>
