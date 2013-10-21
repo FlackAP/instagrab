@@ -12,8 +12,8 @@ $('.start').click(function(){
 	$('.tagsinput').css('opacity', "1")
 	$('.hide-button').css('opacity', "1")
 	$('.start').css('opacity', '0')
-	$('.nav').css('height', '300px')
-  $('.dates').css('opacity', "1") 
+	$('.nav').css('height', '320px')
+  $('.dates').css('opacity', "1")
 })
 
 $('.hide-button').click(function(){

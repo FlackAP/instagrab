@@ -112,8 +112,6 @@ body {
                     .grab {
                         border:none;
                         background-color: #348A8A;
-                        top:133px;
-
                     }
                 }
             }
@@ -132,6 +130,7 @@ body {
                 top: 18px;
                 display:inline;
                 opacity:0;
+                margin-top:30px;
             }
 
             .grab {
@@ -141,10 +140,11 @@ body {
                 background-color: $lightblue;
                 border-radius:4px;
                 position: absolute;
-                top: 131px;
-                left: 257px;
+                top: 97px;
+                left: 390px;
                 text-align: center;
                 line-height: 24px;
+                cursor:pointer;
             }
         }
 
@@ -162,6 +162,7 @@ body {
         line-height: 10;
         padding-right: 0px;
         -webkit-transition: opacity .6s ease-out;
+        cursor:pointer;
 
             img {
                 height:25px;
@@ -175,6 +176,7 @@ body {
             right:3%;
             opacity:0;
             font-size: 20px;
+            cursor:pointer;
 
             img {
                 height:25px;
@@ -209,6 +211,7 @@ body {
 .main {
     margin: 0 auto;
     width:90%;
+    margin-top:50px;
 }
 
 .view {
@@ -384,7 +387,7 @@ body {
     .main {
         width:90%;
         margin:0 auto;
-
+        margin-top:40px;
     }
 }
 
@@ -411,5 +414,9 @@ body {
         display:inline-block;
     }
 
+    .nav ul .grab {
+        top:155px;
+        left:257px;
+    }
 
 }
