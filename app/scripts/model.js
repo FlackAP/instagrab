@@ -24,16 +24,30 @@ allGrabbed = Backbone.Collection.extend({
 var data = [
 	{
 	Photo: 'images/cool.jpg',
-	Timestamp: 'Sept. 1',
-	Caption: 'cool pic',
-	Likes: 'No',
-	Comments: 'No'
+	Timestamp: 'September 1 2013',
+	Caption: 'Smokin a pipe and brooding',
+	Likes: '100',
+	Comments: '4,000'
 	},
 	{
-	Photo: 'images/cool.jpg',
-	Timestamp: 'Sept. 1',
-	Caption: 'cool pic',
-	Likes: 'No',
-	Comments: 'No'
+	Photo: 'images/rocky.jpg',
+	Timestamp: 'October 3 2013',
+	Caption: 'Wow Cool Dog!!!!',
+	Likes: '200',
+	Comments: '13'
+	},
+	{
+	Photo: 'images/three.jpg',
+	Timestamp: 'October 4 2013',
+	Caption: '#Cool #Drinking #A Coffee#',
+	Likes: '100',
+	Comments: '4,000'
+	},
+	{
+	Photo: 'images/shine.jpg',
+	Timestamp: 'October 4 2013',
+	Caption: 'MOONSHINE GET YA DRUNK',
+	Likes: '500',
+	Comments: 'Over 9,000'
 	}
 ]

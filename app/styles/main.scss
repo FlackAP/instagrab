@@ -209,9 +209,15 @@ body {
 /*MAIN IMAGES*/
 
 .main {
-    margin: 0 auto;
+    margin: 48px 16%;
     width:90%;
     margin-top:50px;
+}
+
+.image-unit {
+    display:inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .view {
@@ -224,6 +230,7 @@ body {
     text-align: center;
     box-shadow: 1px 1px 2px #e6e6e6;
     cursor: default;
+    display:inline-block;
 }
 .view .mask, .view .content {
     width: 300px;

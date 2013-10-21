@@ -1,7 +1,6 @@
 GrabbedRouter = Backbone.Router.extend({
 
 	initialize: function() {
-		$('.main').html('')
 		this.images = new allGrabbed()
 		this.images.add(data)
 	},
@@ -12,13 +11,14 @@ GrabbedRouter = Backbone.Router.extend({
 
 	showImages: function(){
 		console.log("showing all grabbed images")
-		$('.main').html('')
-		new ImageView({model:this.images})
+		this.images.forEach(function(image){
+			new ImageView({model:image})
+		})
 		// this.images.fetch({
 		// 	success: function(image){
 		// 		images.each(function(image){
 		// 			new ImageView({model: Grabbed})
-		// 		})
+		// 	})
 		// 	}
 		// })
 	}
