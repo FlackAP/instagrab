@@ -56,23 +56,14 @@
 
                     <script type="text/template" id="photo-template">
                         <div class="view cool-view">
-                            <img src="<%= item.get('photo')%>"/>  
+                            <img src="<%= item.get('Photo')%>"/>  
                             <div class="mask">  
                                 <h2><%= item.get('Timestamp')%></h2>  
                                 <p><%= item.get('Caption')%></p>  
                                 <p><%= item.get('Likes')%> likes, <%= item.get('Comments')%> comments</p>  
                             </div>  
-                        <div>
+                        </div>
                     </script>
-
-                    <div class="view cool-view">  
-                        <img src="images/cool.jpg" />  
-                        <div class="mask">  
-                            <h2>Timestamp</h2>  
-                            <p>Caption</p>  
-                            <p>3 likes, 2 comments</p>  
-                        </div>  
-                    </div>
                 </div>
             </div>
 
@@ -84,7 +75,7 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
-        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
         <script src="scripts/tags.js"></script>
         <script src="bower_components/isotope/jquery.isotope.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
@@ -105,6 +96,10 @@
 
         <!-- build:js scripts/main.js -->
         
+        
+        <script src="scripts/model.js"></script>
+        <script src="scripts/views.js"></script>
+        <script src="scripts/routes.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
