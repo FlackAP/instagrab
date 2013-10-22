@@ -6,7 +6,7 @@ ImageView = Backbone.View.extend({
  
 	initialize: function(){
 		console.log('view created!')
-		$('.main').append(this.el),
+		$('.wrapper').append(this.el),
 		this.render()
 	},
 
