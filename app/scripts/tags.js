@@ -177,7 +177,7 @@
 	$.fn.tagsInput = function(options) { 
     var settings = jQuery.extend({
       interactive:true,
-      defaultText:'add a tag',
+      defaultText:'Add Tags With # and Users with @',
       minChars:0,
       width:'300px',
       height:'100px',
