@@ -2,11 +2,12 @@ GrabbedRouter = Backbone.Router.extend({
 
 	initialize: function() {
 		this.images = new allGrabbed()
-		this.images.add(data)
+		this.images.add('url')
 
 		if (window.location.hash) {
 			this.accesstoken= window.location.hash.replace('#access_token=', "")
 			console.log(window.location.hash.replace('#access_token=', ""))
+			console.log("router.images.models")
 		} 
 		else  {
 			// 'SHOW LOGIN BUTTON HERE'

@@ -37,7 +37,7 @@
             </div>
             <div class="nav begin">   
                         <ul>
-                            <li><input name="tags" id="tags" value="Add Tags With #, Add users with @"></li>
+                            <li><input class="user" placeholder="cool"></li>
                             <li class='dates'>
                                 <label for="from">From:</label>
                                 <input type="text" id="from" name="from" />
@@ -57,7 +57,7 @@
 
                     <script type="text/template" id="photo-template">
                         <div class="view cool-view">
-                            <img src="<%= item.get('Photo')%>"/>  
+                            <img src="<%= router.images.models[0].attributes.images.standard_resolution.url%>"/>  
                             <div class="mask">  
                                 <h2><%= item.get('Timestamp')%></h2>  
                                 <p><%= item.get('Caption')%></p>  

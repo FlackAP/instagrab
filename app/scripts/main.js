@@ -31,10 +31,19 @@ $('.hide-button').click(function(){
 
 $('.grab').click(function(){
 
-  var wowcool= $("span.added-tag").filter(function() { return ($(this).text())})
+  var wowcool= $('.user').val()
 
-  $.getJSON('https://api.instagram.com/v1/users/search?q='+ wowcool + '&access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&callback=?').then(function(data)
-    { console.log(data) })
+  console.log('https://api.instagram.com/v1/users/search?q='+ wowcool + '&access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&callback=?')
+
+  $.getJSON('https://api.instagram.com/v1/users/search?q='+ wowcool + '&access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&callback=?').then(function(response) { 
+    console.log('userID = ', response.data[0].id);
+
+    $.getJSON('https://api.instagram.com/v1/users/' +response.data[0].id + '/media/recent?access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&callback=?').then(function(response){
+      console.log('WOW THE PICS ARE', response.data)
+      router.images.add(response.data)
+    })
+
+  })
 
 })
 

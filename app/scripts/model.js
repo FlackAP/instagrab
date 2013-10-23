@@ -17,37 +17,8 @@ allGrabbed = Backbone.Collection.extend({
 		console.log('cool new collection')
 	},
 
-  model: Grabbed
+  model: Grabbed,
+
+  url: "https://api.instagram.com/v1/users/search?q=flackap&access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&callback=?"
 
 })
-
-var data = [
-	{
-	Photo: "https://raw.github.com/FlackAP/instagrab/master/app/images/cool.jpg",
-	Timestamp: 'September 1 2013',
-	Caption: 'Smokin a pipe and brooding',
-	Likes: '100',
-	Comments: '4,000'
-	},
-	{
-	Photo: 'https://raw.github.com/FlackAP/instagrab/master/app/images/rocky.jpg',
-	Timestamp: 'October 3 2013',
-	Caption: 'Wow Cool Dog!!!!',
-	Likes: '200',
-	Comments: '13'
-	},
-	{
-	Photo: 'https://raw.github.com/FlackAP/instagrab/master/app/images/three.jpg',
-	Timestamp: 'October 4 2013',
-	Caption: '#Cool #Drinking #A Coffee#',
-	Likes: '100',
-	Comments: '4,000'
-	},
-	{
-	Photo: 'https://raw.github.com/FlackAP/instagrab/master/app/images/shine.jpg',
-	Timestamp: 'October 4 2013',
-	Caption: 'MOONSHINE GET YA DRUNK',
-	Likes: '500',
-	Comments: 'Over 9,000'
-	}
-]
