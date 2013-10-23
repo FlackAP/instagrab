@@ -27,6 +27,20 @@ $('.hide-button').click(function(){
   $('input').prop('disabled', true);
 })
 
+// GET USER ID
+
+$('.grab').click(function(){
+
+  var wowcool= $("span.added-tag").filter(function() { return ($(this).text())})
+
+  $.getJSON('https://api.instagram.com/v1/users/search?q='+ wowcool + '&access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&callback=?').then(function(data)
+    { console.log(data) })
+
+})
+
+
+
+
 //Date Picker
 
 $(function() {

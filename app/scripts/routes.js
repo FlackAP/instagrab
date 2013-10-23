@@ -3,10 +3,20 @@ GrabbedRouter = Backbone.Router.extend({
 	initialize: function() {
 		this.images = new allGrabbed()
 		this.images.add(data)
+
+		if (window.location.hash) {
+			this.accesstoken= window.location.hash.replace('#access_token=', "")
+			console.log(window.location.hash.replace('#access_token=', ""))
+		} 
+		else  {
+			// 'SHOW LOGIN BUTTON HERE'
+			console.log('no hash')
+		}	
 	},
 
 	routes: {
 		"grabbed" : "showImages"
+
 	},
 
 	showImages: function(){

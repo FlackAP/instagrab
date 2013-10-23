@@ -96,7 +96,7 @@
 				}
 
 				if (value !='' && skipTag != true) { 
-                    $('<span>').addClass('tag').append(
+                    $('<span>').addClass('tag added-tag').append(
                         $('<span>').text(value).append('&nbsp;&nbsp;'),
                         $('<a>', {
                             href  : '#',
