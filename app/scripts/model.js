@@ -1,10 +1,5 @@
 Grabbed = Backbone.Model.extend({
 	defaults: {
-		Photo: 'cool.jpg',
-		Timestamp: '',
-		Caption: '',
-		Likes: 'No',
-		Comments: 'No'
 	},
 
 	initialize: function(){
@@ -15,6 +10,9 @@ Grabbed = Backbone.Model.extend({
 allGrabbed = Backbone.Collection.extend({
 	initialize: function() {
 		console.log('cool new collection')
+		this.on('add', function(image) {
+			new ImageView({model:image})
+		})	
 	},
 
   model: Grabbed,

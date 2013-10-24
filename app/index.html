@@ -37,7 +37,7 @@
             </div>
             <div class="nav begin">   
                         <ul>
-                            <li><input class="user" placeholder="cool"></li>
+                            <li><input class="user" placeholder="cool" value="flackap"></li>
                             <li class='dates'>
                                 <label for="from">From:</label>
                                 <input type="text" id="from" name="from" />
@@ -45,7 +45,7 @@
                                 <input type="text" id="to" name="to" />
                             </li>
                             <li>
-                                <a class="route" href="#/grabbed"><div class="grab">grab images</div></a>
+                                <a class="route" href="#"><div class="grab">grab images</div></a>
                             </li>
                         </ul> 
                         <p class='start'>start grabbing! <img class="start-button" src="images/arrow.png"></p>
@@ -57,11 +57,15 @@
 
                     <script type="text/template" id="photo-template">
                         <div class="view cool-view">
-                            <img src="<%= router.images.models[0].attributes.images.standard_resolution.url%>"/>  
+                            <img src="<%=item.get('images').standard_resolution.url %>"/>  
                             <div class="mask">  
-                                <h2><%= item.get('Timestamp')%></h2>  
-                                <p><%= item.get('Caption')%></p>  
-                                <p><%= item.get('Likes')%> likes, <%= item.get('Comments')%> comments</p>  
+                                <h2>cool</h2>  
+                                <p>
+                                    <% if (item.get('caption')) { %>
+                                        <%= item.get('caption').text %>
+                                    <% } %>
+                                </p>  
+                                <p><%= item.get('likes').count %> likes, <%= item.get('comments').count%> comments</p>  
                             </div>  
                         </div>
                     </script>

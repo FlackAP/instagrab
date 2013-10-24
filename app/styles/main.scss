@@ -127,12 +127,11 @@ body {
                 }
             }
 
-            .tagsinput {
-                opacity:0;
-                -webkit-transition:opacity 1s ease;
-                position: absolute;
-                top: 20px;
-                display:inline;
+            .user {
+                position:absolute;
+                top: 98px;
+                left: 87px;
+                height: 28px;
             }
 
             .dates {
