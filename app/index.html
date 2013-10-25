@@ -26,6 +26,7 @@
 
 
         <div class="container">
+
             <div class="header">
                 <div class="wrapper">
                     <h3 class="text-muted">insta<span>grab</span></h3>
@@ -35,6 +36,7 @@
                     
                 </div>
             </div>
+
             <div class="nav begin">   
                         <ul>
                             <li><input class="user" placeholder="cool" value="flackap"></li>
@@ -47,6 +49,9 @@
                             <li>
                                 <a class="route" href="#"><div class="grab">grab images</div></a>
                             </li>
+                            <li class="iso-tags">
+                                THIS IS WHERE THE TAGS WILL GO
+                            </li>
                         </ul> 
                         <p class='start'>start grabbing! <img class="start-button" src="images/arrow.png"></p>
                         <p class="hide-button">hide <img src="images/x.png"> </p>
@@ -57,9 +62,9 @@
 
                     <script type="text/template" id="photo-template">
                         <div class="view cool-view">
-                            <img src="<%=item.get('images').standard_resolution.url %>"/>  
+                            <img src="<%= item.get('images').standard_resolution.url %>"/>  
                             <div class="mask">  
-                                <h2>cool</h2>  
+                                <h2> <%= moment(new Date(parseInt(item.get('created_time'))*1000)).format("MM-DD-YYYY") %></h2>  
                                 <p>
                                     <% if (item.get('caption')) { %>
                                         <%= item.get('caption').text %>
@@ -105,7 +110,6 @@
         
         <script src="scripts/model.js"></script>
         <script src="scripts/views.js"></script>
-        <script src="scripts/routes.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
