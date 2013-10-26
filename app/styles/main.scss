@@ -99,13 +99,14 @@ body {
         -webkit-transition:height 1s ease;
 
         ul {
-            margin:0;
-            padding:0;
-            width:220px;
-            margin:10px;
-            list-style:none;
-            position:absolute;
-            top:30%;    
+            margin: 0;
+            padding: 0;
+            width: 220px;
+            margin: 10px;
+            list-style: none;
+            position: absolute;
+            top: 33%;
+            left: 4%;   
 
             li {
                 display:inline;
@@ -161,12 +162,12 @@ body {
 
             .iso-tags {
                 position: absolute;
-                height: 164px;
+                height: 127px;
                 width: 575px;
                 border: 1px solid black;
-                top: 28px;
+                top: 48px;
                 left: 575px;
-                opacity:0;
+                opacity: 0;
             }
         }
 
