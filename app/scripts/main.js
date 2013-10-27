@@ -1,11 +1,9 @@
-// Tag searcher
 
-$('#tags').tagsInput({
-  "width":"200px",
-  "height": "175px"
-});
+//disable inputs on load
 
 $('input').prop('disabled', true);
+$('.iso-tags').css('opacity', "1")
+
 // Nav Bar functions
 
 $('.start').click(function(){
@@ -16,6 +14,7 @@ $('.start').click(function(){
 	$('.nav').css('height', '320px')
   $('.dates').css('opacity', "1")
   $('input').prop('disabled', false);
+  $('.iso-tags').css('opacity', "1")
 })
 
 $('.hide-button').click(function(){
@@ -25,19 +24,10 @@ $('.hide-button').click(function(){
 	$('.hide-button').css('opacity', "0")
   $('.dates').css('opacity', "0")
   $('input').prop('disabled', true);
+  $('.iso-tags').css('opacity', "0")
 })
 
 // GET USER ID
-
-$('.grab').click(function(){
-
-  var wowcool= $("span.added-tag").filter(function() { return ($(this).text())})
-
-  $.getJSON('https://api.instagram.com/v1/users/search?q='+ wowcool + '&access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&callback=?').then(function(data)
-    { console.log(data) })
-
-})
-
 
 
 
@@ -62,4 +52,4 @@ $(function() {
         $( "#from" ).datepicker( "option", "maxDate", selectedDate );
       }
     });
-  });
+  })

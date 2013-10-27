@@ -12,7 +12,6 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/tag.css">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -25,7 +24,10 @@
         <![endif]-->
 
 
+
+
         <div class="container">
+
             <div class="header">
                 <div class="wrapper">
                     <h3 class="text-muted">insta<span>grab</span></h3>
@@ -35,9 +37,14 @@
                     
                 </div>
             </div>
+
             <div class="nav begin">   
                         <ul>
-                            <li><input name="tags" id="tags" value="Add Tags With #, Add users with @"></li>
+
+                            <li>
+                                <label class="user-label" for="user">User:</label>
+                                <input class="user" placeholder="cool" value="flackap">
+                            </li>
                             <li class='dates'>
                                 <label for="from">From:</label>
                                 <input type="text" id="from" name="from" />
@@ -45,9 +52,13 @@
                                 <input type="text" id="to" name="to" />
                             </li>
                             <li>
-                                <a class="route" href="#/grabbed"><div class="grab">grab images</div></a>
+                                <a class="route" href="#"><div class="grab">grab images</div></a>
                             </li>
-                        </ul> 
+                         
+                        </ul>    
+                        <div class="iso-tags">
+                            THIS IS WHERE THE TAGS WILL GO
+                        </div>
                         <p class='start'>start grabbing! <img class="start-button" src="images/arrow.png"></p>
                         <p class="hide-button">hide <img src="images/x.png"> </p>
             </div>
@@ -57,11 +68,15 @@
 
                     <script type="text/template" id="photo-template">
                         <div class="view cool-view">
-                            <img src="<%= item.get('Photo')%>"/>  
+                            <img src="<%= item.get('images').standard_resolution.url %>"/>  
                             <div class="mask">  
-                                <h2><%= item.get('Timestamp')%></h2>  
-                                <p><%= item.get('Caption')%></p>  
-                                <p><%= item.get('Likes')%> likes, <%= item.get('Comments')%> comments</p>  
+                                <h2> <%= moment(new Date(parseInt(item.get('created_time'))*1000)).format("MM-DD-YYYY") %></h2>  
+                                <p>
+                                    <% if (item.get('caption')) { %>
+                                        <%= item.get('caption').text %>
+                                    <% } %>
+                                </p>  
+                                <p><%= item.get('likes').count %> likes, <%= item.get('comments').count%> comments</p>  
                             </div>  
                         </div>
                     </script>
@@ -77,10 +92,11 @@
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-        <script src="scripts/tags.js"></script>
         <script src="bower_components/isotope/jquery.isotope.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/backbone/backbone.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        
         
         <!-- endbower -->
         <!-- endbuild -->
@@ -100,7 +116,6 @@
         
         <script src="scripts/model.js"></script>
         <script src="scripts/views.js"></script>
-        <script src="scripts/routes.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
