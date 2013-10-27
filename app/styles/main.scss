@@ -130,6 +130,12 @@ body {
                 }
             }
 
+            .user-label {
+                top: 74px;
+                left: 87px;
+                position: absolute;
+            }
+
             .user {
                 position:absolute;
                 top: 98px;
@@ -160,32 +166,33 @@ body {
                 cursor:pointer;
             }
 
-            .iso-tags {
-                position: absolute;
-                height: 127px;
-                width: 575px;
-                border: 1px solid black;
-                top: 48px;
-                left: 575px;
-                opacity: 0;
-            }
+           
         }
 
+        .iso-tags {
+            position: absolute;
+            height: 137px;
+            width: 50%;
+            border: 1px solid black;
+            bottom: 47px;
+            right: 4%;
+            display: inline-block;
+        }
 
         .start {
-        text-align: center;
-        margin: 0 auto;
-        height:10px;
-        width: 100%;
-        z-index:100;
-        opacity: 1;
-        color: white;
-        font-size: 20px;
-        font-family: 'asap';
-        line-height: 10;
-        padding-right: 0px;
-        -webkit-transition: opacity .6s ease-out;
-        cursor:pointer;
+            text-align: center;
+            margin: 0 auto;
+            height:10px;
+            width: 100%;
+            z-index:100;
+            opacity: 1;
+            color: white;
+            font-size: 20px;
+            font-family: 'asap';
+            line-height: 10;
+            padding-right: 0px;
+            -webkit-transition: opacity .6s ease-out;
+            cursor:pointer;
 
             img {
                 height:25px;

@@ -2,6 +2,7 @@
 //disable inputs on load
 
 $('input').prop('disabled', true);
+$('.iso-tags').css('opacity', "1")
 
 // Nav Bar functions
 

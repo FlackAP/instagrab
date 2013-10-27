@@ -12,7 +12,6 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/tag.css">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -24,7 +23,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        
+
 
 
         <div class="container">
@@ -41,7 +40,11 @@
 
             <div class="nav begin">   
                         <ul>
-                            <li><input class="user" placeholder="cool" value="flackap"></li>
+
+                            <li>
+                                <label class="user-label" for="user">User:</label>
+                                <input class="user" placeholder="cool" value="flackap">
+                            </li>
                             <li class='dates'>
                                 <label for="from">From:</label>
                                 <input type="text" id="from" name="from" />
@@ -51,10 +54,11 @@
                             <li>
                                 <a class="route" href="#"><div class="grab">grab images</div></a>
                             </li>
-                            <li class="iso-tags">
-                                THIS IS WHERE THE TAGS WILL GO
-                            </li>
-                        </ul> 
+                         
+                        </ul>    
+                        <div class="iso-tags">
+                            THIS IS WHERE THE TAGS WILL GO
+                        </div>
                         <p class='start'>start grabbing! <img class="start-button" src="images/arrow.png"></p>
                         <p class="hide-button">hide <img src="images/x.png"> </p>
             </div>
