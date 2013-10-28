@@ -52,10 +52,12 @@ MainView = Backbone.View.extend({
 			this.accesstoken= window.location.hash.replace('#access_token=', "")
 			console.log(window.location.hash.replace('#access_token=', ""))
 			console.log('cool works')
+			$('.authorize').hide()
 		} 
 		else  {
 			// 'SHOW LOGIN BUTTON HERE'
 			console.log('no hash')
+			$('.authorize').show()
 		}
 	}	
 })
