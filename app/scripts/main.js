@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+
 });
 
 
@@ -27,7 +28,18 @@ $('.hide-button').click(function(){
   $('input').prop('disabled', true);
 })
 
-// GET USER ID
+//CONVERT DATES TO UNIX RANGE
+
+function unixConvert(from, to) {
+  var from = $('#from').val();
+  var to   = $('#to').val();
+
+  var unixFrom = moment(from).unix();
+  var unixTo   = moment(to).unix()
+
+  console.log(unixFrom + " to " + unixTo)  
+  return (unixFrom + "-" + unixTo)
+}
 
 
 

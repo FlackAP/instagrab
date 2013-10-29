@@ -18,7 +18,7 @@ ImageView = Backbone.View.extend({
 MainView = Backbone.View.extend({
 
 	initialize: function() {
-		var that = this;
+		var that 	= this;
 		this.images = new allGrabbed()
 		this.logInCheck()
 
@@ -26,23 +26,21 @@ MainView = Backbone.View.extend({
 		// if you gave this view a template, and the .grab was in this.el,
 		// you could use the events: {} to do the click even
 		$('.grab').click(function(){
+			unixConvert()
+			var user= $('.user').val()
 
-		  var user= $('.user').val()
+		  	console.log('https://api.instagram.com/v1/users/search?q='+ user + '&access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&callback=?')
 
-		  console.log('https://api.instagram.com/v1/users/search?q='+ user + '&access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&callback=?')
+		  	$.getJSON('https://api.instagram.com/v1/users/search?q='+ user + '&access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&callback=?').then(function(response) { 
+		    	console.log('userID = ', response.data[0].id);
 
-		  $.getJSON('https://api.instagram.com/v1/users/search?q='+ user + '&access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&callback=?').then(function(response) { 
-		    console.log('userID = ', response.data[0].id);
-
-		    $.getJSON('https://api.instagram.com/v1/users/' +response.data[0].id + '/media/recent?access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&count=33&callback=?').then(function(response){
-		      console.log('WOW THE PICS ARE', response.data)
-		      // add images to collection
-		      that.images.add(response.data)
-
-		    })
-
-		  })
-
+		    	$.getJSON('https://api.instagram.com/v1/users/' +response.data[0].id + '/media/recent?access_token=2695069.1eea9a1.5344624053fb40089c31b7d9c2c2c05b&count=33&next_max_id&callback=?').then(function(response){
+		      		console.log('WOW THE PICS ARE', response.data)
+		      		// add images to collection
+		      		that.images.add(response.data)
+		    	})
+		 	})
+		  
 		})
 	},
 
@@ -55,7 +53,6 @@ MainView = Backbone.View.extend({
 			$('.authorize').hide()
 		} 
 		else  {
-			// 'SHOW LOGIN BUTTON HERE'
 			console.log('no hash')
 			$('.authorize').show()
 		}
