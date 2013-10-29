@@ -82,6 +82,19 @@ body {
     }
 }
 
+.authorize {
+    position: absolute;
+    right: 4px;
+    bottom: 1px;
+    width: 135px;
+    text-align: center;
+    border-radius: 3px;
+    background: #F68022;
+    box-shadow: none;
+    border: 1px solid rgb(122, 122, 122);
+    color: white;
+}
+
 /*Sidebar styles*/
 
 .nav {
@@ -172,10 +185,10 @@ body {
         .iso-tags {
             position: absolute;
             height: 137px;
-            width: 50%;
+            width: 43%;
             border: 1px solid black;
             bottom: 47px;
-            right: 4%;
+            right: 10%;
             display: inline-block;
         }
 
@@ -216,6 +229,7 @@ body {
         }
 
     }
+
 
 .nav-full {
     height:200px;
@@ -392,11 +406,28 @@ body {
 
 }
 
+@media screen and (max-width:1200px) {
+    .nav .iso-tags {
+        width:38%
+    }
+
+}
+
 @media screen and (max-width:1070px) {
     .wrapper {
         width: 720px;
     }
+    .nav .iso-tags{
+        width: 34%;
+    }
 }
+
+@media screen and (max-width:980px) {
+    .nav .iso-tags{
+         opacity:0;
+    }
+}
+
 
 @media screen and (max-width:768px) {
     .container {
@@ -439,6 +470,7 @@ body {
         width:640px;
     }
     
+
 }
 
 @media screen and (max-width:640px) {

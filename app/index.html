@@ -32,7 +32,7 @@
                 <div class="wrapper">
                     <h3 class="text-muted">insta<span>grab</span></h3>
                     <p>really cool tagline</p>
-                    <a href="https://instagram.com/oauth/authorize/?client_id=1eea9a1ec1c8424b816843a6b6509883&redirect_uri=http://127.0.0.1:9000/&response_type=token">AUTHORIZE YO ASS</a>
+                    <a href="https://instagram.com/oauth/authorize/?client_id=1eea9a1ec1c8424b816843a6b6509883&redirect_uri=http://127.0.0.1:9000/&response_type=token"><div class="authorize">Login To Instagram!</div></a>
  
                     
                 </div>
@@ -80,7 +80,6 @@
                             </div>  
                         </div>
                     </script>
-                    <div class="push"></div>
             </div>
 
             <div class="footer">Lovingly Crafted by <a href="http://FlackAP.com">Andy Flack</a></div>
@@ -91,7 +90,8 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
-        <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+        <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+        <script src="bower_components/jquery-ui/ui/jquery.ui.datepicker.js"></script>
         <script src="bower_components/isotope/jquery.isotope.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
         <script src="bower_components/backbone/backbone.js"></script>
@@ -112,11 +112,9 @@
         </script>
 
         <!-- build:js scripts/main.js -->
-        
-        
+        <script src="scripts/main.js"></script>
         <script src="scripts/model.js"></script>
         <script src="scripts/views.js"></script>
-        <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/plugins.js -->

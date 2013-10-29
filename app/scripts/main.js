@@ -1,8 +1,11 @@
+$( document ).ready(function() {
+
+});
+
 
 //disable inputs on load
 
 $('input').prop('disabled', true);
-$('.iso-tags').css('opacity', "1")
 
 // Nav Bar functions
 
@@ -14,7 +17,6 @@ $('.start').click(function(){
 	$('.nav').css('height', '320px')
   $('.dates').css('opacity', "1")
   $('input').prop('disabled', false);
-  $('.iso-tags').css('opacity', "1")
 })
 
 $('.hide-button').click(function(){
@@ -24,10 +26,20 @@ $('.hide-button').click(function(){
 	$('.hide-button').css('opacity', "0")
   $('.dates').css('opacity', "0")
   $('input').prop('disabled', true);
-  $('.iso-tags').css('opacity', "0")
 })
 
-// GET USER ID
+//CONVERT DATES TO UNIX RANGE
+
+function unixConvert(from, to) {
+  var from = $('#from').val();
+  var to   = $('#to').val();
+
+  var unixFrom = moment(from).unix();
+  var unixTo   = moment(to).unix()
+
+  console.log(unixFrom + " to " + unixTo)  
+  return (unixFrom + "-" + unixTo)
+}
 
 
 
