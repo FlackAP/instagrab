@@ -63,28 +63,28 @@ body {
         font-family:'Asap';
         color:white;
     }
-}
-
-.header h3 {
-    margin-top: 0;
-    margin-bottom: -7px;
-    margin-left:5px;
-    line-height: 33px;
-    padding-top: 26px;
-    padding-bottom: 19px;
-    color: white;
-    font-family: 'Lily Script One';
-    font-size: 40px;
-    display:inline-block;
     
-     span {
-        color:$red;
+    h3 {
+        margin-top: 0;
+        margin-bottom: -7px;
+        margin-left:5px;
+        line-height: 33px;
+        padding-top: 26px;
+        padding-bottom: 19px;
+        color: white;
+        font-family: 'Lily Script One';
+        font-size: 40px;
+        display:inline-block;
+    
+        span {
+            color:$red;
+        }
     }
 }
 
 .authorize {
     position: absolute;
-    right: 2px;
+    right: 5px;
     bottom: 1px;
     vertical-align:bottom;
 }
@@ -266,9 +266,16 @@ body {
 .image-list {
     padding-bottom:75px;
     padding-top: 112px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .image-unit {
+    width: 300px;
+    height: 300px;
     display:inline-block;
     margin-left: 10px;
     margin-right: 10px;

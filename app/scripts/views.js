@@ -6,12 +6,33 @@ ImageView = Backbone.View.extend({
  
 	initialize: function(){
 		console.log('view created!')
-		$('.wrapper').append(this.el),
+		$('.image-list').append(this.el),
 		this.render()
 	},
 
 	render: function(){
+		var that = this
 		this.$el.append( this.template({item: this.model }) )
+		this.model.get('tags').forEach(function(tag){
+			// make a new tag
+			var newTag = $("<span>#" + tag + " </span>")
+			
+			$('.iso-tags').append(newTag)
+			// add the class to the actual image
+			that.$el.addClass(tag)
+			
+			// initialize isotope
+			$('#image-list').isotope({
+  				itemSelector : '.image-unit',
+			  	layoutMode : 'fitRows',
+			  	resizesContainer: false
+			});
+
+			newTag.click(function(){
+				console.log('hey you clicked', tag)
+				$('#image-list').isotope({ filter: tag });
+			})
+		})
 	}
 })
 
