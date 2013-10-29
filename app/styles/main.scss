@@ -69,7 +69,7 @@ body {
     margin-top: 0;
     margin-bottom: -7px;
     margin-left:5px;
-    line-height: 40px;
+    line-height: 33px;
     padding-top: 26px;
     padding-bottom: 19px;
     color: white;
@@ -84,8 +84,17 @@ body {
 
 .authorize {
     position: absolute;
-    right: 4px;
+    right: 2px;
     bottom: 1px;
+    vertical-align:bottom;
+}
+
+.auth-logo {
+    height:40px;
+    width:40px;
+}
+
+.auth-span {
     width: 135px;
     text-align: center;
     border-radius: 3px;
@@ -93,6 +102,7 @@ body {
     box-shadow: none;
     border: 1px solid rgb(122, 122, 122);
     color: white;
+    vertical-align: bottom;
 }
 
 /*Sidebar styles*/
