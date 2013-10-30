@@ -15,22 +15,18 @@ ImageView = Backbone.View.extend({
 		this.$el.append( this.template({item: this.model }) )
 		this.model.get('tags').forEach(function(tag){
 			// make a new tag
-			var newTag = $("<span>#" + tag + " </span>")
+			var newTag = $("<span class='tag'>#" + tag + " </span>")
 			
 			$('.iso-tags').append(newTag)
 			// add the class to the actual image
 			that.$el.addClass(tag)
 			
-			// initialize isotope
-			$('#image-list').isotope({
-  				itemSelector : '.image-unit',
-			  	layoutMode : 'fitRows',
-			  	resizesContainer: false
-			});
-
 			newTag.click(function(){
-				console.log('hey you clicked', tag)
-				$('#image-list').isotope({ filter: tag });
+				console.log('hey you clicked', tag);
+				if ($('.image-unit').hasClass(tag)) {
+					$('.image-unit').removeClass('hidden-tag')
+					$('.image-unit').addClass('selected-tag')
+				}
 			})
 		})
 	}
@@ -61,8 +57,10 @@ MainView = Backbone.View.extend({
 		      		that.images.add(response.data)
 		    	})
 		 	})
-		  
+		 //hides the footer on button click to  
+		 $('.footer').hide()
 		})
+
 	},
 
 

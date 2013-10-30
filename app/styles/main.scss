@@ -192,14 +192,25 @@ body {
            
         }
 
+
+
         .iso-tags {
             position: absolute;
             height: 137px;
             width: 43%;
-            border: 1px solid black;
             bottom: 47px;
             right: 10%;
             display: inline-block;
+
+            .tag {
+                margin-left: 2px;
+                height: 32px;
+                color: rgb(105, 104, 104);
+                background: #4ad9d9;
+                border: 1px solid #36b1bf;
+                border-radius: 4px;
+                vertical-align:bottom;
+            }
         }
 
         .start {
@@ -402,6 +413,16 @@ body {
     transition-delay: 0.2s;
 }
 
+/*ISOTOPE*/
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -441,7 +462,25 @@ body {
 
 @media screen and (max-width:980px) {
     .nav .iso-tags{
-         opacity:0;
+         width:28%;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .nav {
+
+        .ul {
+            top: 25%;
+        }
+
+        .iso-tags{
+            width: 28%;
+            height: 100px;
+            bottom: 51px;
+            margin: 0 auto;
+            width: 83%;
+            text-align: center;
+         }
     }
 }
 
