@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/2f01463a.main.css">
+        <link rel="stylesheet" href="styles/7ec4b8c3.main.css">
         <script src="scripts/vendor/f7f27360.modernizr.js"></script>
     </head>
     <body>
@@ -19,54 +19,75 @@
         <![endif]-->
 
 
+
+
         <div class="container">
+
             <div class="header">
                 <div class="wrapper">
                     <h3 class="text-muted">insta<span>grab</span></h3>
-                    <p>really cool tagline</p> 
+                    <p>really cool tagline</p>
+                    <a href="https://instagram.com/oauth/authorize/?client_id=1eea9a1ec1c8424b816843a6b6509883&redirect_uri=http://127.0.0.1:9000/&response_type=token">
+                        <div class="authorize">
+                            <span class="auth-span">Sign In To Instagram<span>
+                            <img class="auth-logo" src="images/9b432729.Instagram_Icon_Large.png">
+                        </span></span></div>
+                    </a>
+ 
                     
                 </div>
             </div>
+
             <div class="nav begin">   
                         <ul>
-                            <li><input name="tags" id="tags" value="Add/Remove Tags!"></li>
+
+                            <li>
+                                <label class="user-label" for="user">User:</label>
+                                <input class="user" placeholder="cool" value="flackap">
+                            </li>
                             <li class="dates">
                                 <label for="from">From:</label>
-                                <input type="text" id="from" name="from">
+                                <input type="text" id="from" name="from" placeholder="Date search">
                                 <label for="to">To:</label>
-                                <input type="text" id="to" name="to">
+                                <input type="text" id="to" name="to" placeholder="coming soon!">
                             </li>
                             <li>
-                                <a class="route" href="#/grabbed"><div class="grab">grab images</div></a>
+                                <a class="route" href="#"><div class="grab">grab images</div></a>
                             </li>
-                        </ul> 
+                         
+                        </ul>    
+                        <div class="iso-tags">
+                        </div>
                         <p class="start">start grabbing! <img class="start-button" src="images/0b9671a9.arrow.png"></p>
                         <p class="hide-button">hide <img src="images/abdf9a98.x.png"> </p>
             </div>
 
             
-            <div class="wrapper">
-                <div class="main">
-
-                    <script type="text/template" id="photo-template">
-                        <div class="view cool-view">
-                            <img src="<%= item.get('Photo')%>"/>  
-                            <div class="mask">  
-                                <h2><%= item.get('Timestamp')%></h2>  
-                                <p><%= item.get('Caption')%></p>  
-                                <p><%= item.get('Likes')%> likes, <%= item.get('Comments')%> comments</p>  
-                            </div>  
-                        </div>
-                    </script>
-                </div>
-            </div>
+            <div class="wrapper image-list" id="image-list"></div>
 
 
             
+            
         </div>
 
+         <footer class="footer">Lovingly Crafted by <a href="http://FlackAP.com">Andy Flack</a></footer>
 
-        <script src="scripts/a1b1a129.vendor.js"></script>
+        <script type="text/template" id="photo-template">
+            <div class="view cool-view isotope-item">
+                <img src="<%= item.get('images').standard_resolution.url %>"/>  
+                <div class="mask">  
+                    <h2> <%= moment(new Date(parseInt(item.get('created_time'))*1000)).format("MM-DD-YYYY") %></h2>  
+                    <p>
+                        <% if (item.get('caption')) { %>
+                            <%= item.get('caption').text %>
+                        <% } %>
+                    </p>  
+                    <p><%= item.get('likes').count %> likes, <%= item.get('comments').count%> comments</p>  
+                </div>  
+            </div>
+        </script>
+
+        <script src="scripts/76961474.vendor.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -78,7 +99,7 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <script src="scripts/70ce8370.main.js"></script>
+        <script src="scripts/8f51b166.main.js"></script>
 
         <script src="scripts/491c175a.plugins.js"></script>
 </body>
