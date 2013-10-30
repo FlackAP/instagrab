@@ -15,7 +15,7 @@ ImageView = Backbone.View.extend({
 		this.$el.append( this.template({item: this.model }) )
 		this.model.get('tags').forEach(function(tag){
 			// make a new tag
-			var newTag = $("<span class='tag'>#" + tag + " </span>")
+			var newTag = $("<div class='tag'>#" + tag + " </div>")
 			
 			$('.iso-tags').append(newTag)
 			// add the class to the actual image
@@ -23,12 +23,16 @@ ImageView = Backbone.View.extend({
 			
 			newTag.click(function(){
 				console.log('hey you clicked', tag);
-				if ($('.image-unit').hasClass(tag)) {
-					$('.image-unit').removeClass('hidden-tag')
-					$('.image-unit').addClass('selected-tag')
-				}
+				$('.image-unit').addClass('hidden')
+				$('.image-unit.'+tag).removeClass('hidden')
+			})
+
+			$('.all').click(function(){
+				$('.image-unit').removeClass('hidden')
 			})
 		})
+
+		removeDuplicate()
 	}
 })
 
@@ -58,7 +62,7 @@ MainView = Backbone.View.extend({
 		    	})
 		 	})
 		 //hides the footer on button click to  
-		 $('.footer').hide()
+		 	$('.footer').hide()
 		})
 
 	},

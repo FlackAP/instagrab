@@ -196,20 +196,26 @@ body {
 
         .iso-tags {
             position: absolute;
-            height: 137px;
+            height: 98px;
             width: 43%;
-            bottom: 47px;
+            bottom: 15%;
             right: 10%;
             display: inline-block;
 
             .tag {
                 margin-left: 2px;
                 height: 32px;
-                color: rgb(105, 104, 104);
-                background: #4ad9d9;
+                color: #696868;
+                background: #9CE2E2;
                 border: 1px solid #36b1bf;
                 border-radius: 4px;
-                vertical-align:bottom;
+                vertical-align: bottom;
+                line-height: 2;
+                overflow: hidden;
+                text-align: center;
+                width: 80px;
+                display: inline-block;
+                cursor: pointer;
             }
         }
 
@@ -350,6 +356,7 @@ body {
 .view a.info:hover {
     box-shadow: 0 0 5px #000
 }
+
 
 
 /* Custom page footer */

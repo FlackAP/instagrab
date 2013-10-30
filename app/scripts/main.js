@@ -41,9 +41,23 @@ function unixConvert(from, to) {
   return (unixFrom + "-" + unixTo)
 }
 
-// Isotope Filter
+// Remove duplicate spans
+function removeDuplicate(){
+  var seen = {};
+  $('.tag').each(function() {
+      var txt = $(this).text();
+      if (seen[txt])
+          $(this).remove();
+      else
+          seen[txt] = true;
+  });
+}
 
+// Add message for filtering tags
 
+$('.grab').click(function(){
+  $('.iso-tags').append('<p>Filter by Tag: </p><div class="tag all">All</div>')
+})
 
 //Date Picker
 
