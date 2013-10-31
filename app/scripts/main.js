@@ -2,32 +2,6 @@ $( document ).ready(function() {
 
 });
 
-
-//disable inputs on load
-
-$('input').prop('disabled', true);
-
-// Nav Bar functions
-
-$('.start').click(function(){
-	$('.nav').addClass('nav-full')
-	$('.tagsinput').css('opacity', "1")
-	$('.hide-button').css('opacity', "1")
-	$('.start').css('opacity', '0')
-	$('.nav').css('height', '320px')
-  $('.dates').css('opacity', "1")
-  $('input').prop('disabled', false);
-})
-
-$('.hide-button').click(function(){
-	$('.nav').css('height', '120px')
-	$('.tagsinput').css('opacity', '0')
-	$('.start').css('opacity', '1')
-	$('.hide-button').css('opacity', "0")
-  $('.dates').css('opacity', "0")
-  $('input').prop('disabled', true);
-})
-
 //CONVERT DATES TO UNIX RANGE
 
 function unixConvert(from, to) {
@@ -52,12 +26,6 @@ function removeDuplicate(){
           seen[txt] = true;
   });
 }
-
-// Add message for filtering tags
-
-$('.grab').click(function(){
-  $('.iso-tags').append('<p>Filter by Tag: </p><div class="tag all">All</div>')
-})
 
 //Date Picker
 
